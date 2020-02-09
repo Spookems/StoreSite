@@ -1,0 +1,22 @@
+﻿body {
+
+}
+
+.listing{
+    float:left;
+}
+
+.thumbnailHeader{
+    display:inline;
+    font-size:16px;
+}
+
+.thumbnailText{
+    font-size:14px;
+}
+
+.listingThumbnail {
+    float: left;
+    padding: 10px;
+    margin: 10px;
+}

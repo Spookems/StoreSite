@@ -1,0 +1,56 @@
+﻿@model IEnumerable<StoreSite.Models.Classes.StoreItem>
+
+@{
+    ViewData["Title"] = "Listings";
+}
+
+<head>
+    <link href="~/css/General.css" rel="stylesheet" />
+    <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+</head>
+
+<h1>Listings</h1>
+
+<div class="col-lg 12">
+
+    <div class="col-lg-3" style="float:left;">
+
+        <h4>Filter</h4>
+
+        <p>Input 1</p>
+        <input type="text" />
+        <br />
+
+        <p>Input 2</p>
+        <input type="text" />
+        <br />
+
+        <p>Input 3</p>
+        <input type="text" />
+        <br />
+
+        <p>Input 4</p>
+        <input type="text" />
+        <br />
+
+    </div>
+
+    <div class="table col-lg-9 listing">
+
+        @foreach (var item in Model)
+        {
+            <div class="img-thumbnail listingThumbnail col-lg-2">
+                <h6 class="thumbnailHeader">
+                    @Html.DisplayFor(modelItem => item.ID)
+                </h6>
+                <h6 class="thumbnailHeader">
+                    @Html.DisplayFor(modelItem => item.Title)
+                </h6>
+                <p thumbnailText="thumbnailText">
+                    @Html.DisplayFor(modelItem => item.DescriptionS)
+                </p>
+                <button class="btn-dark" href="">Details</button>
+            </div>
+        }
+    </div>
+</div>
