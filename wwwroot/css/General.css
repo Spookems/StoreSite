@@ -1,9 +1,13 @@
 ﻿body {
+    background-color:whitesmoke;
+}
 
+.homeMain{
+    margin-top:20px;
 }
 
 .listing{
-    float:left;
+    margin-bottom: 3%;
 }
 
 .thumbnailHeader{
@@ -17,6 +21,37 @@
 
 .listingThumbnail {
     float: left;
-    padding: 10px;
-    margin: 10px;
+    margin: 15px;
+    padding:15px;
+    min-height: 120px;
+    max-height: 300px;
+    width: 29.5%;
+    border-radius: 10px;
+    background-color: white;
+    border: 1.5px solid #dee2e6;
+}
+
+.QLButton {
+    width: 40%;
+    padding: 5px;
+    float: left;
+    border-radius: 5px;
+    text-align:center;
+}
+.DButton {
+    width: 40%;
+    padding: 5px;
+    float: right;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.filterTitle {
+    padding: 3px;
+    border-radius: 5px;
+}
+
+.filterSection{
+    padding-right:10px;
+    padding-left:10px;
 }

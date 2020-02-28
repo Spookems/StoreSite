@@ -1,18 +1,21 @@
-﻿namespace StoreSite.Models.DBInteraction
+﻿using StoreSite.Models.Classes;
+using System.Data.Entity;
+
+namespace StoreSite.Models.DBInteraction
 {
     interface IDatabaseInterface
     {
 
         public bool Add();
 
-        public bool Delete();
+        public bool Delete(int id);
 
-        public bool Edit();
+        public bool Edit(int id);
 
-        public void Details();
+        public StoreItem Details(int id);
 
-        public void ListAll();
+        public DbSet<StoreItem> ListAll();
 
-        public void FilterEntries();
+        public void FilterEntries(string filter1, string filter2);
     }
 }
