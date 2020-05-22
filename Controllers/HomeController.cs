@@ -23,7 +23,12 @@ namespace StoreSite.Controllers
             return View();
         }
 
-        public IActionResult About()
+        public IActionResult TheCottage()
+        {
+            return View();
+        }
+
+        public IActionResult HowToBook()
         {
             return View();
         }
@@ -33,5 +38,16 @@ namespace StoreSite.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+
+        public IActionResult TheHosts()
+        {
+            return View();
+        }
+
+        public IActionResult TheArea()
+        {
+            return View();
+        }
+
     }
 }

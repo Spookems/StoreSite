@@ -2,11 +2,17 @@
     background-color:whitesmoke;
 }
 
-.homeMain{
-    margin-top:20px;
+.homeMain {
+    margin-top: 20px;
+    background-size: cover;
 }
 
-.listing{
+.imgCircle{
+    background-size: cover;
+    margin-top:10px;
+}
+
+.listing {
     margin-bottom: 3%;
 }
 

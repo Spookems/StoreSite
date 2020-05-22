@@ -5,6 +5,26 @@
     <UserSecretsId>aspnet-StoreSite-96060906-03DE-4F1A-9444-F14DC654FCE7</UserSecretsId>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Include="wwwroot\Images\Back Garden 1.jpg" />
+    <None Include="wwwroot\Images\Back Garden 2.jpg" />
+    <None Include="wwwroot\Images\Bathroom 1.jpg" />
+    <None Include="wwwroot\Images\Bedroom 1.jpg" />
+    <None Include="wwwroot\Images\Bedroom 2.jpg" />
+    <None Include="wwwroot\Images\Bedroom 3.jpg" />
+    <None Include="wwwroot\Images\Cptn Cooks Monument.jpg" />
+    <None Include="wwwroot\Images\Front of House.jpg" />
+    <None Include="wwwroot\Images\Hill Side 1.jpg" />
+    <None Include="wwwroot\Images\Hill Side 2.jpg" />
+    <None Include="wwwroot\Images\Horses.jpg" />
+    <None Include="wwwroot\Images\Kitchen.jpg" />
+    <None Include="wwwroot\Images\Living Room.jpg" />
+    <None Include="wwwroot\Images\Main Room.jpg" />
+    <None Include="wwwroot\Images\Roseberry Topping.jpg" />
+    <None Include="wwwroot\Images\Second Living Room.jpg" />
+    <None Include="wwwroot\Images\Travel Brocures.jpg" />
+  </ItemGroup>
+
 
   <ItemGroup>
     <PackageReference Include="EntityFramework" Version="6.4.0" />
@@ -15,7 +35,7 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.1" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.1" />
     <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="3.1.1" />
-    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.1" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.2" />
   </ItemGroup>
 
 </Project>
