@@ -1,16 +1,13 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
-
-
-
     <main role="main">
 
         <div class="jumbotron p-4 p-md-5 text-white rounded bg-dark homeMain">
             <div class="col-md-6 px-0">
-                <h1 class="display-4 font-weight-light">Website Home Page</h1>
-                <p class="lead my-3">Welcome to my test website, currently this website serves no functional purpose and exists soley as a testing ground. <br /> Feel free to have a look around.</p>
-                <p class="lead mb-0"><a asp-controller="Home" asp-action="About" class="text-white font-weight-bold">About Me...</a></p>
+                <h1 class="display-4 font-weight-light">FosterCo ltd.</h1>
+                <p class="lead my-3">Welcome to my test website, currently this website serves no functional purpose and exists soley as a testing ground, the fictional company this site is modelled around is 'FosterCo' a music retailer based in the UK.  <br /> Feel free to have a look around.</p>
+                <p class="lead mb-0"><a asp-controller="Home" asp-action="About" class="text-white font-weight-bold">About FosterCo...</a></p>
             </div>
         </div>
 
@@ -18,25 +15,27 @@
 
             <!-- Three columns of text below the carousel -->
             <div class="row">
-                <div class="col-lg-4">
-                    <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 140x140"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
-                    <h2>Current Stock</h2>
-                    <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
-                    <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
-                </div><!-- /.col-lg-4 -->
-                <div class="col-lg-4">
-                    <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 140x140"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
-                    <h2>Technologies</h2>
-                    <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
-                    <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
-                </div><!-- /.col-lg-4 -->
-                <div class="col-lg-4">
-                    <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 140x140"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
-                    <h2>Future Plans</h2>
-                    <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-                    <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
-                </div><!-- /.col-lg-4 -->
-            </div><!-- /.row -->
-            
+                <div class="col-lg-4 position-relative" style="margin-bottom:50px;">
+                    <img class="bd-placeholder-img rounded-circle thumbnailComponent" src="~/Images/HeadPhones.jpg" width="140" height="140">
+                    <h2 style="text-align:center">Current Stock</h2>
+                    <p style="height:130px; text-align:center">Here at FosterCo, stock moves quickly, goods arrive in small numbers and are shipped out almost as quickly as they are shipped in, check current stock levels to see if we have what you're looking for!</p>
+                    <div class="thumbnailButtonHolder"><a class="btn btn-secondary thumbnailComponent" href="#" role="button">View details »</a></div>
+                </div>
+
+                <div class="col-lg-4 position-relative" style="margin-bottom:50px;">
+                    <img class="bd-placeholder-img rounded-circle thumbnailComponent" src="~/Images/Tech.jpg" width="140" height="140">
+                    <h2 style="text-align:center">Technologies</h2>
+                    <p style="height:130px; text-align:center">Take a look under the curtain at the technologies and people that made this website possible.</p>
+                    <div class="thumbnailButtonHolder"><a class="btn btn-secondary thumbnailComponent" href="#" role="button">View details »</a></div>
+                </div>
+
+                <div class="col-lg-4 position-relative" style="margin-bottom:50px;">
+                    <img class="bd-placeholder-img rounded-circle thumbnailComponent" src="~/Images/Tree.jpg" width="140" height="140">
+                    <h2 style="text-align:center">Future Plans</h2>
+                    <p style="height:130px; text-align:center;">Theres a long road map set in place for FosterCo, but all plans must start somewhere, for us, that place is here.</p>
+                    <div class="thumbnailButtonHolder"><a class="btn btn-secondary thumbnailComponent" href="#" role="button">View details »</a></div>
+                </div>
+            </div>
+
         </div>
     </main>

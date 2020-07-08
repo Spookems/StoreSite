@@ -10,6 +10,11 @@
     margin-bottom: 3%;
 }
 
+.thumbnailButtonHolder{
+    bottom: 0;
+    left: 15%;
+}
+
 .thumbnailHeader{
     display:inline;
     font-size:16px;
@@ -19,10 +24,17 @@
     font-size:14px;
 }
 
+.thumbnailComponent{
+    margin-left:32%;
+}
+.thumbnailText{
+    text-align:center;
+}
+
 .listingThumbnail {
     float: left;
     margin: 15px;
-    padding:15px;
+    padding: 15px;
     min-height: 120px;
     max-height: 300px;
     width: 29.5%;
