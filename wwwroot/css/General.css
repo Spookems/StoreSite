@@ -4,6 +4,7 @@
 
 .homeMain{
     margin-top:20px;
+    margin-bottom:10px;
 }
 
 .listing{
@@ -63,7 +64,14 @@
     border-radius: 5px;
 }
 
-.filterSection{
+.filterSection {
     padding-right:10px;
     padding-left:10px;
+}
+
+/* About Page */
+
+.learnMoreButton {
+    position: absolute;
+    bottom: 20px;
 }
