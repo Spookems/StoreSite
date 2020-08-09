@@ -16,12 +16,14 @@
 
         public int Pricing { get; set; }
 
+        public int[] RelatedItems { get; set; }
+
         public enum Type
         {
-            Public,             //Available to all   
-            Member,             //Available to all signed in
-            Admin,              //Avaiable to administrators only
-            Hidden              //Available to none (Discontinued)
+            Public,             // Available to all   
+            Member,             // Available to all signed in
+            Admin,              // Avaiable to administrators only
+            Hidden              // Available to none (Discontinued)
         }
     }
 }
