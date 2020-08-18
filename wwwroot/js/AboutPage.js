@@ -3,6 +3,16 @@ $(document).ready(function () {
 
 });
 
+$('#CloseButton').click(function () {
+    alert("IN");
+
+    $('#learnMoreJumbo').css("height", "100px");
+    $('#learnMorePara').css("visibility", "hidden");
+
+    $(this).toggle();
+});
+
+
 $('#learnMoreButton').click(function ()
 {
     $('#learnMoreJumbo').css("height", "302px");
@@ -16,6 +26,7 @@ $('#learnMoreButton').click(function ()
 
     $(this).toggle();
 }); 
+
 
     //if (toggle === undefined) {
     //    alert('initial');

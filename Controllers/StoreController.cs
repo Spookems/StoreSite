@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using StoreSite.Data;
+using StoreSite.Models.Classes;
 using StoreSite.Models.DBInteraction;
 
 namespace StoreSite.Controllers
@@ -26,11 +27,18 @@ namespace StoreSite.Controllers
 
         public IActionResult Details(int id)
         {
-            
-
             var model = DB.Details(id);
 
             return View(model);
         }
+
+        public IActionResult CurrentStock()
+        {
+            var listings = DB.ListAll();
+
+            return View(listings);
+        }
+
+       // To Do: Add in Edit Action for current Stock
     }
 }

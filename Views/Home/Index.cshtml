@@ -50,16 +50,16 @@
             <div class="row">
                 <div class="col-lg-4 position-relative" style="margin-bottom:50px;">
                     <img class="bd-placeholder-img rounded-circle thumbnailComponent" src="~/Images/HeadPhones.jpg" width="140" height="140">
-                    <h2 style="text-align:center">Current Stock</h2>
+                    <h2 style="text-align:center">Current Listings</h2>
                     <p style="height:130px; text-align:center">Here at FosterCo, stock moves quickly, goods arrive in small numbers and are shipped out almost as quickly as they are shipped in, check current stock levels to see if we have what you're looking for!</p>
-                    <div class="thumbnailButtonHolder"><a class="btn btn-secondary thumbnailComponent" href="#" role="button">View details »</a></div>
+                    <div class="thumbnailButtonHolder"><a class="btn btn-secondary thumbnailComponent" asp-area="" asp-controller="Store" asp-action="Listings">View details »</a></div>
                 </div>
 
                 <div class="col-lg-4 position-relative" style="margin-bottom:50px;">
                     <img class="bd-placeholder-img rounded-circle thumbnailComponent" src="~/Images/Tech.jpg" width="140" height="140">
                     <h2 style="text-align:center">Technologies</h2>
                     <p style="height:130px; text-align:center">Take a look under the curtain at the technologies and people that made this website possible.</p>
-                    <div class="thumbnailButtonHolder"><a class="btn btn-secondary thumbnailComponent" href="#" role="button">View details »</a></div>
+                    <div class="thumbnailButtonHolder"><a class="btn btn-secondary thumbnailComponent" asp-area="" asp-controller="Home" asp-action="Technologies">View details »</a></div>
                 </div>
 
                 <div class="col-lg-4 position-relative" style="margin-bottom:50px;">
