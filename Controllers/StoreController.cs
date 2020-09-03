@@ -41,12 +41,10 @@ namespace StoreSite.Controllers
             return View(listings);
         }
 
-       // To Do: Add in Edit Action for current Stock
-
         [HttpGet]
         public IActionResult Edit(int id)
         {
-            var model = Db.StoreListings.Find(id);
+            var model = DB.Details(id);
 
             return View(model);
         }
@@ -54,19 +52,19 @@ namespace StoreSite.Controllers
         [HttpPost]
         public IActionResult Edit(StoreItem newItem)
         {
-
             if (ModelState.IsValid)
             {
-                var oldItem = Db.StoreListings.Find(newItem.ID);
-
-                oldItem.Title = newItem.Title;
-                oldItem.DescriptionS = newItem.DescriptionS;
-                oldItem.DescriptionL = newItem.DescriptionL;
-                oldItem.ImageS = newItem.ImageS;
-                oldItem.ImageL = newItem.ImageL;
-                oldItem.Pricing = newItem.Pricing;
-
-                Db.SaveChanges();
+                try
+                {
+                    DB.Save(newItem);
+                }
+                catch(NullReferenceException e)
+                {
+                    System.Diagnostics.Debug.WriteLine("Issue with edit of item ID: " + newItem.ID + 
+                        "\n" + "Exception: " + e);
+                    return Redirect("/Home/Error");
+                }
+                
             }
 
             return View();

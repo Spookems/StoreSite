@@ -1,11 +1,17 @@
-﻿body {
+﻿/* Shared */
+
+body {
     background-color:whitesmoke;
 }
+
+/* Index */
 
 .homeMain{
     margin-top:20px;
     margin-bottom:10px;
 }
+
+/* Listings */
 
 .listing{
     margin-bottom: 3%;
@@ -69,7 +75,7 @@
     padding-left:10px;
 }
 
-/* About Page */
+/* About */
 
 .learnMoreButton {
     position: absolute;

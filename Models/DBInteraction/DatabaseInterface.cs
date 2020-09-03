@@ -10,7 +10,7 @@ namespace StoreSite.Models.DBInteraction
 
         public bool Delete(int id);
 
-        public bool Edit(int id);
+        public void Save(StoreItem id);
 
         public StoreItem Details(int id);
 

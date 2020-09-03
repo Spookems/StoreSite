@@ -1,5 +1,21 @@
 ﻿<!DOCTYPE html>
+
+<style>
+
+    .sticky {
+        position: fixed !important;
+        z-index: 5;
+        width: 100%;
+    }
+
+    .stickyMain {
+        padding-top: 60px;
+    }
+
+</style>
+
 <html lang="en">
+
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,7 +26,7 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="navbar">
             <div class="container">
                 <a class="navbar-brand" href="#">Website Template</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample07" aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
@@ -47,7 +63,7 @@
             </div>
         </nav>
     </header>
-    <div class="container">
+    <div class="container" id="Main">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
@@ -58,9 +74,11 @@
             &copy; 2020 - StoreSite - <a asp-area="" asp-controller="Home" asp-action="Privacy">Our Privacy Policy</a> - <a asp-area="" asp-controller="Home" asp-action="Index">Home Page</a>
         </div>
     </footer>
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/NavBar.js"></script>
     @RenderSection("Scripts", required: false)
 </body>
 </html>

@@ -28,17 +28,21 @@ namespace StoreSite.Models.DBInteraction
         {
             var item = SqlData.StoreListings.Find(id);
 
-            System.Diagnostics.Debug.WriteLine("Item: " + item.Title);
-            System.Diagnostics.Debug.WriteLine("Item: " + item.Pricing);
-            System.Diagnostics.Debug.WriteLine("Item: " + item.ImageL);
-
-
             return item;
         }
 
-        public bool Edit(int id)
+        public void Save(StoreItem newItem)
         {
-            throw new NotImplementedException();
+            var oldItem = SqlData.StoreListings.Find(newItem.ID);
+
+            oldItem.Title = newItem.Title;
+            oldItem.DescriptionS = newItem.DescriptionS;
+            oldItem.DescriptionL = newItem.DescriptionL;
+            oldItem.ImageS = newItem.ImageS;
+            oldItem.ImageL = newItem.ImageL;
+            oldItem.Pricing = newItem.Pricing;
+
+            SqlData.SaveChanges();
         }
 
         public void FilterEntries(string filter1, string filter2)
