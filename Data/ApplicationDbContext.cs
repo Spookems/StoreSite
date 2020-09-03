@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using StoreSite.Models.Classes;
 
 namespace StoreSite.Data
 {
@@ -12,5 +13,6 @@ namespace StoreSite.Data
             : base(options)
         {
         }
+        public DbSet<StoreSite.Models.Classes.StoreItem> StoreItem { get; set; }
     }
 }

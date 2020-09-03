@@ -16,7 +16,7 @@
 
         public int Pricing { get; set; }
 
-        public int[] RelatedItems { get; set; }
+        //public int[] RelatedItems { get; set; }
 
         public enum Type
         {
