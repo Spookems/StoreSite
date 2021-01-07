@@ -1,4 +1,5 @@
 ﻿using StoreSite.Models.Classes;
+using System.Collections.Generic;
 using System.Data.Entity;
 
 namespace StoreSite.Models.DBInteraction
@@ -16,6 +17,6 @@ namespace StoreSite.Models.DBInteraction
 
         public DbSet<StoreItem> ListAll();
 
-        public void FilterEntries(string filter1, string filter2);
+        public IEnumerable<StoreItem> FilterEntries(string filter1);
     }
 }

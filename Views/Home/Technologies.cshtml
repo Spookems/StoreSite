@@ -1,7 +1,66 @@
-﻿
-@{
+﻿@{
     ViewData["Title"] = "Technologies";
 }
-
+<link href="~/css/General.css" rel="stylesheet" />
 <h1>Technologies</h1>
 
+<div class="col-12 row" style="overflow:hidden">
+    <div class="col-9 position-relative">
+        <h2>About the tech used...</h2>
+        <p>While the website itself is not hugely populated on the front end, there is more than enough to demonstrate going on at the database level and the back end, namely c#, javascript and SQL server.</p>
+        <p>Feel free to explore the options to the right to see in greater details the technology on offer.</p>
+    </div>
+
+    <div class="popoutElem" id="NETElem" style="overflow:hidden; position:absolute; transform:translateX(-120%); transition-duration:1s; top:30%; ">Insert .NET related information here</div>
+    <div class="popoutElem" id="javaElem" style="overflow:hidden; position:absolute; transform:translateX(-120%); transition-duration:1s; top:40%; ">Insert JS related information here</div>
+    <div class="popoutElem" id="CSSElem" style="overflow:hidden; position:absolute; transform:translateX(-120%); transition-duration:1s; top:50%; ">Insert CSS related information here</div>
+    <div class="popoutElem" id="SQLElem" style="overflow:hidden; position:absolute; transform:translateX(-120%); transition-duration:1s; top:60%; ">Insert SQl related information here</div>
+
+
+    <div class="col-3 position-relative">
+        <h3>Links</h3>
+
+        <div class="listing">
+            <div class="card mb-4 shadow-sm">
+                <img class="bd-placeholder-img card-img-top" height="130" preserveAspectRatio="xMidYMid slice" src="" />
+                <div class="card-body">
+                    <a href="#" class="card-text techLink" id="techLink1">.NET Core ></a>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="listing">
+            <div class="card mb-4 shadow-sm">
+                <img class="bd-placeholder-img card-img-top" height="130" preserveAspectRatio="xMidYMid slice" src="" />
+                <div class="card-body">
+                    <a href="#" class="card-text techLink" id="techLink2">JavaScript ></a>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="listing">
+            <div class="card mb-4 shadow-sm">
+                <img class="bd-placeholder-img card-img-top" height="130" preserveAspectRatio="xMidYMid slice" src="" />
+                <div class="card-body">
+                    <a href="#" class="card-text techLink" id="techLink3">CSS ></a>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="listing">
+            <div class="card mb-4 shadow-sm">
+                <img class="bd-placeholder-img card-img-top" height="130" preserveAspectRatio="xMidYMid slice" src="" />
+                <div class="card-body">
+                    <a href="#" class="card-text techLink" id="techLink4">SQL ></a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/js/Technologies.js"></script>

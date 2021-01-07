@@ -69,5 +69,17 @@ namespace StoreSite.Controllers
 
             return View();
         }
+
+        public void FilterListings(string input1, string input2, string input3, string input4)
+        {
+            
+        }
+
+        public IActionResult Search(string input)
+        {
+           var model =  DB.FilterEntries(input);
+
+            return Redirect("Listings");
+        }
     }
 }

@@ -41,35 +41,37 @@
         </div>
 
         <div class="col-12 d-inline-flex">
-            <div class="col-3">
+            <form asp-action="FilterListings" asp-controller="Store">
+                <div class="col-3">
 
                     <h4>Filter</h4>
                     <div class="row">
                         <div class="filterSection col-lg-12">
                             <p class="filterTitle">Input 1</p>
-                            <input type="text" />
+                            <input type="text" name="input1" />
                         </div>
                         <hr />
                         <div class="filterSection col-lg-12">
                             <p class="filterTitle">Input 2</p>
-                            <input type="text" />
+                            <input type="text" name="input2" />
                         </div>
                         <hr />
                         <div class="filterSection col-lg-12">
                             <p class="filterTitle">Input 3</p>
-                            <input type="text" />
+                            <input type="text" name="input3" />
                         </div>
                         <hr />
                         <div class="filterSection col-lg-12">
                             <p class="filterTitle">Input 4</p>
-                            <input type="text" />
+                            <input type="text" name="input4" />
                         </div>
                     </div>
                     <br />
 
-                    <a class="btn btn-link btn-dark">Search</a>
+                    <input type="submit" name="submit" value="Submit" />
                     <hr />
-            </div>
+                </div>
+            </form>
             <div class="col-9">
                 <div class="table col-lg-12 listing w-100">
                     <h4 style="padding-left:43%">Cheap Options</h4>
@@ -83,7 +85,7 @@
                             {
                                 <div class="col-md-4 listing">
                                     <div class="card mb-4 shadow-sm">
-                                        <img class="bd-placeholder-img card-img-top" height="225"  preserveAspectRatio="xMidYMid slice" src="~/Images/Product Images/@Html.DisplayFor(n => item.ImageS)"/>
+                                        <img class="bd-placeholder-img card-img-top" height="225" preserveAspectRatio="xMidYMid slice" src="~/Images/Product Images/@Html.DisplayFor(n => item.ImageS)" />
                                         <div class="card-body">
                                             <p class="card-text">@Html.DisplayFor(model => item.Title)</p>
                                             <div class="d-flex justify-content-between align-items-center">
@@ -139,37 +141,36 @@
 
 
                     @*@foreach (var item in Model)
-        {
-            <div class="listingThumbnail ">
+                    {
+                        <div class="listingThumbnail ">
 
-                <h6 class="thumbnailHeader">
-                    @Html.DisplayFor(modelItem => item.ID)
-                </h6>
-                <h6 class="thumbnailHeader">
-                    @Html.DisplayFor(modelItem => item.Title)
-                </h6>
-                <p thumbnailText="thumbnailText">
-                    @Html.DisplayFor(modelItem => item.DescriptionS)
-                </p>
+                            <h6 class="thumbnailHeader">
+                                @Html.DisplayFor(modelItem => item.ID)
+                            </h6>
+                            <h6 class="thumbnailHeader">
+                                @Html.DisplayFor(modelItem => item.Title)
+                            </h6>
+                            <p thumbnailText="thumbnailText">
+                                @Html.DisplayFor(modelItem => item.DescriptionS)
+                            </p>
 
-                <hr />
-                <div class="btn-group-lg">
+                            <hr />
+                            <div class="btn-group-lg">
 
-                    @Html.ActionLink("Details", "Preview", new { id = item.ID }, new { @class = "btn btn-sm btn-outline-secondary", @role = "button" })
-                    @Html.ActionLink("Details", "Details", new { id = item.ID }, new { @class = "btn btn-sm btn-outline-secondary", @role = "button" })
+                                @Html.ActionLink("Details", "Preview", new { id = item.ID }, new { @class = "btn btn-sm btn-outline-secondary", @role = "button" })
+                                @Html.ActionLink("Details", "Details", new { id = item.ID }, new { @class = "btn btn-sm btn-outline-secondary", @role = "button" })
 
-                </div>
-            </div>
-        }*@
+                            </div>
+                        </div>
+                    }*@
                 </div>
             </div>
         </div>
 
 
-            
 
-            
 
-        </div>
+
+
     </div>
 </body>

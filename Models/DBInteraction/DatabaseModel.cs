@@ -1,7 +1,9 @@
 ﻿using StoreSite.Data;
 using StoreSite.Models.Classes;
 using System;
+using System.Collections.Generic;
 using System.Data.Entity;
+using System.Linq;
 
 namespace StoreSite.Models.DBInteraction
 {
@@ -45,9 +47,11 @@ namespace StoreSite.Models.DBInteraction
             SqlData.SaveChanges();
         }
 
-        public void FilterEntries(string filter1, string filter2)
+        public IEnumerable<StoreItem> FilterEntries(string filter1)
         {
-            throw new NotImplementedException();
+            var model = SqlData.StoreListings.Where(i => i.Title == filter1);
+
+            return model;
         }
 
         public DbSet<StoreItem> ListAll()
