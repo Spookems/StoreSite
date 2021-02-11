@@ -2,66 +2,74 @@
 @{
     ViewData["Title"] = "About";
 }
+<link href="~/css/General.css" rel="stylesheet" />
 
-<h1>About</h1>
+<head>
+    <meta cjarset="utf-8" />
+    <title>Parralax</title>
 
-<div class="jumbotron" id="learnMoreJumbo" style="position:relative">
-    <div class="container">
-        <h1 class="display-3">About</h1>
-        <p>About page main header section.</p>
-        <div id="learnMorePara" style="visibility:hidden;">
-            <p>
-                Take everything you see on this page with a grain of salt, I wrote most of it at midnight while barely awake. <br /> Thanks for clicking this utterly unnecessary JQuery animation event.
-            </p>
-            <!--<a class="btn btn-primary btn-lg learnMoreButton" href="#" id="CloseButton" role="button" style="position:absolute; bottom:20px;">^ Learn Less ^</a>-->
+</head>
+
+<div class="col-12 mb-5 mt-3">
+    <div class="jumbotron" id="learnMoreJumbo" style="position:relative; background-image: url('../Images/About us/about_us_6.jpg');">
+        <div class="container">
+            <h1 class="display-3; text-white">About</h1>
+            <p class="text-white">About page main header section.</p>
+            <div id="learnMorePara" style="visibility:hidden;">
+                <p class="text-white">
+                    Take everything you see on this page with a grain of salt, I wrote most of it at midnight while barely awake. <br /> Thanks for clicking this utterly unnecessary JQuery animation event.
+                </p>-->
+                <!--<a class="btn btn-primary btn-lg learnMoreButton" href="#" id="CloseButton" role="button" style="position:absolute; bottom:20px;">^ Learn Less ^</a>-->
+            </div>
+
+            <a class="btn btn-primary btn-lg learnMoreButton" href="#" id="learnMoreButton" role="button" style="position:absolute; bottom:20px;">Expand</a>
+
         </div>
-        
-        <a class="btn btn-primary btn-lg learnMoreButton" href="#" id="learnMoreButton" role="button" style="position:absolute; bottom:20px;">Expand</a>
-        
+    </div>
+
+    <hr class="featurette-divider" />
+    <div class="row featurette">
+        <div class="col-md-7 order-md-2">
+            <h2 class="featurette-heading">History</h2>
+            <p class="lead">FosterCo is a business that has existed for many a decade, starting out as little more than a pet project for an aspiring Software Developer during his university days, since then it has grown substantially to become a pet project for a working professional </p>
+        </div>
+        <div class="col-md-5 order-md-1">
+            <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" style="background-image: url('../Images/About us/about_us_1.jpg'); background-position:center;" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"></svg>
+        </div>
+    </div>
+    <hr class="featurette-divider" />
+    <div class="row featurette">
+        <div class="col-md-7">
+            <h2 class="featurette-heading">Paragraph on Me</h2>
+            <p class="lead">Provide additional information on a related subject to yourself (perhaps an outline of a previous job or education experience).</p>
+        </div>
+        <div class="col-md-5">
+            <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" style="background-image: url('../Images/About us/about_us_5.jpg'); background-position:center;" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"></svg>
+        </div>
+    </div>
+
+    <hr class="featurette-divider" />
+    <div class="row featurette">
+        <div class="col-md-7 order-md-2">
+            <h2 class="featurette-heading">Additional Information</h2>
+            <p class="lead">Provide some simple information on yourself, outline skills and experience, perhaps include examples of work if there is space remaining.</p>
+        </div>
+        <div class="col-md-5 order-md-1">
+            <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" style="background-image: url('../Images/About us/about_us_3.jpg'); background-position:center;" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"></svg>
+        </div>
+    </div>
+    <hr class="featurette-divider" />
+    <div class="row featurette">
+        <div class="col-md-7">
+            <h2 class="featurette-heading">Contact Details</h2>
+            <p class="lead">Provide additional information on a related subject to yourself (perhaps an outline of a previous job or education experience).</p>
+        </div>
+        <div class="col-md-5">
+            <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" style="background-image: url('../Images/About us/about_us_4.jpg'); background-position:center;" width="500" height="500" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"></svg>
+        </div>
     </div>
 </div>
 
-<hr class="featurette-divider" />
-<div class="row featurette">
-    <div class="col-md-7 order-md-2">
-        <h2 class="featurette-heading">History</h2>
-        <p class="lead">FosterCo is a business that has existed for many a decade, starting out as little more than a pet project for an aspiring Software Developer during his university days, since then it has grown substantially to become a pet project for a <strong> real Software Developer</strong> </p>
-    </div>
-    <div class="col-md-5 order-md-1">
-        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"></rect><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
-    </div>
-</div>
-<hr class="featurette-divider" />
-<div class="row featurette">
-    <div class="col-md-7">
-        <h2 class="featurette-heading">Paragraph on Me</h2>
-        <p class="lead">Provide additional information on a related subject to yourself (perhaps an outline of a previous job or education experience).</p>
-    </div>
-    <div class="col-md-5">
-        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"></rect><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
-    </div>
-</div>
-
-<hr class="featurette-divider" />
-<div class="row featurette">
-    <div class="col-md-7 order-md-2">
-        <h2 class="featurette-heading">Additional Information</h2>
-        <p class="lead">Provide some simple information on yourself, outline skills and experience, perhaps include examples of work if there is space remaining.</p>
-    </div>
-    <div class="col-md-5 order-md-1">
-        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"></rect><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
-    </div>
-</div>
-<hr class="featurette-divider" />
-<div class="row featurette">
-    <div class="col-md-7">
-        <h2 class="featurette-heading">Contact Details</h2>
-        <p class="lead">Provide additional information on a related subject to yourself (perhaps an outline of a previous job or education experience).</p>
-    </div>
-    <div class="col-md-5">
-        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"></rect><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
-    </div>
-</div>
 
 
 <script src="~/lib/jquery/dist/jquery.js"></script>
