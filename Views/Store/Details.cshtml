@@ -43,14 +43,14 @@
             @Html.Raw(Model.DescriptionL)
         </p>
     </div>
+    <hr />
     <div class="col-12" style="padding-bottom:20px;">
         <h3>
             Related Products
         </h3>
-        <div class="w-100 row" style="overflow-x:scroll;"></div>
         @for (int i = 0; i < 3; i++)
         {
-            <div class="col-md-4 listing row" style="float:left; padding-bottom:20px;">
+            <div class="col-md-4 listing row suggestedListings" style="float:left; padding-bottom:20px;">
                 <div class="card mb-4 shadow-sm">
                     <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="40%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
                     <div class="card-body">

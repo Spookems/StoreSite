@@ -77,6 +77,11 @@ body {
     padding-left:10px;
 }
 
+.suggestedListings {
+    padding-bottom: 20px;
+    margin-top: 10px;
+}
+
 /* About */
 
 .learnMoreButton {
@@ -89,6 +94,15 @@ body {
 .techLink {
     padding-left: 30%;
     font-size: x-large;
+}
+
+.techElem {
+    overflow: hidden;
+    position: absolute;
+    transform: translateX(-120%);
+    transition-duration: 1s;
+    top: 30%;
+    width: 800px;
 }
 
 
@@ -123,3 +137,30 @@ body {
         box-shadow: inset 0 0 0 200px rgb(0 0 0 / 15%);
         filter: blur(10px);
     }
+
+/* Image CSS */
+
+.csharpImage {
+    background-image: url('../Images/Technologies/c_sharp_image.jpg');
+    background-position: center;
+}
+
+.jsImage {
+    background-image: url('../Images/Technologies/javascript_image.png');
+    background-position: center;
+}
+
+.htmlImage {
+    background-image: url('../Images/Technologies/html_image.jpg');
+    background-position: center;
+}
+
+.sqlImage {
+    background-image: url('../Images/Technologies/sql_image.jpg');
+    background-position: center;
+}
+
+.cssImage {
+    background-image: url('../Images/Technologies/css_image.png');
+    background-position: center;
+}
