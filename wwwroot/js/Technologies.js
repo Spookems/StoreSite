@@ -1,5 +1,4 @@
 ﻿$(document).ready(function () {
-    alert("on");
 });
 
 $('#techLink1').click(function () {
