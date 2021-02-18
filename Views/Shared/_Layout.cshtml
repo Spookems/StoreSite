@@ -19,6 +19,46 @@
         
         max-width: 1400px !important;
     }
+
+    .dropbtn {
+        background-color: inherit;
+        color: rgba(255,255,255,.5);
+        padding: 8px;
+        font-size: 16px;
+        border: none;
+    }
+
+    .dropdown {
+        position: relative;
+        display: inline-block;
+        border-radius:5px;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #212529;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+
+        .dropdown-content a {
+            color: rgba(255,255,255,.5);
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+            
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    .dropdown:hover .dropbtn {
+        color: rgba(255,255,255,.75);
+    }
 </style>
 
 <html lang="en">
@@ -54,12 +94,12 @@
                         <li class="nav-item">
                             <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Technologies">Technologies</a>
                         </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="dropdown07" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Admin Section</a>
-                            <div class="dropdown-menu" aria-labelledby="dropdown07">
+                        <li class="dropdown nav-item">
+                            <button class="dropbtn">Admin Section</button>
+                            <div class="dropdown-content">
                                 <a class="dropdown-item" asp-controller="Store" asp-action="CurrentStock">Current Stock</a>
-                                <a class="dropdown-item" href="#">Another action</a>
-                                <a class="dropdown-item" href="#">Something else here</a>
+                                <a href="#">Link 2</a>
+                                <a href="#">Link 3</a>
                             </div>
                         </li>
                     </ul>
@@ -90,7 +130,7 @@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
-    <script src="~/js/NavBar.js"></script>
+    <script src="~/js/NavBar.js" ></script>
     @RenderSection("Scripts", required: false)
 </body>
 </html>

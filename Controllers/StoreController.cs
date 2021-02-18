@@ -1,5 +1,4 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using StoreSite.Data;
 using StoreSite.Models.Classes;
 using StoreSite.Models.DBInteraction;
@@ -9,11 +8,11 @@ namespace StoreSite.Controllers
 {
     public class StoreController : Controller
     {
-        
+
         public IDatabaseContext Db = new IDatabaseContext();
 
         public DatabaseModel DB = new DatabaseModel();
-        
+
 
         public IActionResult Index()
         {
@@ -58,13 +57,13 @@ namespace StoreSite.Controllers
                 {
                     DB.Save(newItem);
                 }
-                catch(NullReferenceException e)
+                catch (NullReferenceException e)
                 {
-                    System.Diagnostics.Debug.WriteLine("Issue with edit of item ID: " + newItem.ID + 
+                    System.Diagnostics.Debug.WriteLine("Issue with edit of item ID: " + newItem.ID +
                         "\n" + "Exception: " + e);
                     return Redirect("/Home/Error");
                 }
-                
+
             }
 
             return View();
@@ -72,12 +71,12 @@ namespace StoreSite.Controllers
 
         public void FilterListings(string input1, string input2, string input3, string input4)
         {
-            
+
         }
 
         public IActionResult Search(string input)
         {
-           var model =  DB.FilterEntries(input);
+            var model = DB.FilterEntries(input);
 
             return Redirect("Listings");
         }
