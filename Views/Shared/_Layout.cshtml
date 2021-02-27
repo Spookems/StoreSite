@@ -110,15 +110,20 @@
             </div>
         </nav>
     </header>
-    <div class="container" id="Main">
-        <main role="main" class="pb-3">
+    <div class="container bg-light pt-4 pb-5" id="Main">
+        <main role="main" class="pb-3 mt-5 " style="max-width:1600px;">
             @RenderBody()
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2020 - StoreSite - <a asp-area="" asp-controller="Home" asp-action="Privacy">Our Privacy Policy</a> - <a asp-area="" asp-controller="Home" asp-action="Index">Home Page</a>
+    <footer class="border-top container-fluid pt-3 pb-5">
+        <div class="col-12 row">
+            <div class="col-6 float-left">
+                <strong>@DateTime.Now.Year/@DateTime.Now.Month/@DateTime.Now.Day - Store Site</strong>
+            </div>
+            <div class="col-6 ">
+                <label class="float-right"><a asp-area="" asp-controller="Home" asp-action="Privacy">Our Privacy Policy</a> -  <a asp-area="" asp-controller="Home" asp-action="Index" >Home Page</a></label>
+            </div>
         </div>
     </footer>
 

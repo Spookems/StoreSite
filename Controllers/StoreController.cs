@@ -48,25 +48,80 @@ namespace StoreSite.Controllers
             return View(model);
         }
 
-        [HttpPost]
-        public IActionResult Edit(StoreItem newItem)
+        
+        public IActionResult Product(int ID)
+        {
+            StoreItem model = null;
+            
+            try
+            {
+                model = Db.StoreListings.Find(ID);
+            }
+            catch (NullReferenceException e)
+            {
+                System.Diagnostics.Debug.WriteLine("Issue with edit of item ID: " + model.ID +
+                    "\n" + "Exception: " + e);
+            }
+
+            if(model != null)
+            {
+                return View(model);
+            }
+            else
+            {
+                model = new StoreItem
+                {
+                    Title = "Title",
+                    DescriptionS = "Short Description",
+                    DescriptionL = "Long Description",
+                    Pricing = 0
+                };
+                return View(model);
+            }
+        }
+         [HttpPost]  
+        public IActionResult ProductSubmit(StoreItem item)
         {
             if (ModelState.IsValid)
             {
-                try
+                var oldItem = Db.StoreListings.Find(item.ID);
+                
+                if(oldItem != null)
                 {
-                    DB.Save(newItem);
+                    oldItem = item;
+                    DB.Save(oldItem);
                 }
-                catch (NullReferenceException e)
+                else
                 {
-                    System.Diagnostics.Debug.WriteLine("Issue with edit of item ID: " + newItem.ID +
-                        "\n" + "Exception: " + e);
-                    return Redirect("/Home/Error");
+                    Db.StoreListings.Add(item);
                 }
-
             }
 
-            return View();
+            return Redirect("CurrentStock");
+        }
+
+        public IActionResult DeleteProduct(int id)
+        {
+            bool saved = false;
+            StoreItem model = null;
+
+            try
+            {
+                model = Db.StoreListings.Find(id);
+            }
+            catch(NullReferenceException e) 
+            {
+                return RedirectToAction("CurrentStock");
+            }
+
+            if(model != null )
+            {
+                saved = DB.Delete(id);
+                
+            }
+            System.Diagnostics.Debug.WriteLine("Entry Deletion:" + saved);
+
+            return RedirectToAction("CurrentStock");
         }
 
         public void FilterListings(string input1, string input2, string input3, string input4)

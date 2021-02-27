@@ -23,7 +23,20 @@ namespace StoreSite.Models.DBInteraction
 
         public bool Delete(int id)
         {
-            throw new NotImplementedException();
+            bool saved = false;
+
+            var item = SqlData.StoreListings.Find(id);
+
+            if(item != null)
+            {
+                SqlData.StoreListings.Remove(item);
+
+                SqlData.SaveChanges();
+
+                saved = true;
+            }
+
+            return saved;
         }
 
         public StoreItem Details(int id)

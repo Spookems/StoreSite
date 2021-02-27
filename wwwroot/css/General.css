@@ -164,3 +164,15 @@ body {
     background-image: url('../Images/Technologies/css_image.png');
     background-position: center;
 }
+
+/* Icons */
+
+.binIcon {
+    background-image: url('../Images/Icons/bin.jpg');
+    background-position: center;
+}
+
+.editIcon {
+    background-image: url('../Images/Icons/edit.jpg');
+    background-position: center;
+}
