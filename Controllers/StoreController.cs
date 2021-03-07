@@ -26,7 +26,7 @@ namespace StoreSite.Controllers
             return View(listings);
         }
 
-        public IActionResult Details(int id)
+        public IActionResult Details(Guid id)
         {
             var model = DB.Details(id);
 
@@ -41,7 +41,7 @@ namespace StoreSite.Controllers
         }
 
         [HttpGet]
-        public IActionResult Edit(int id)
+        public IActionResult Edit(Guid id)
         {
             var model = DB.Details(id);
 
@@ -49,7 +49,7 @@ namespace StoreSite.Controllers
         }
 
         
-        public IActionResult Product(int ID)
+        public IActionResult Product(Guid ID)
         {
             StoreItem model = null;
             
@@ -100,7 +100,7 @@ namespace StoreSite.Controllers
             return Redirect("CurrentStock");
         }
 
-        public IActionResult DeleteProduct(int id)
+        public IActionResult DeleteProduct(Guid id)
         {
             bool saved = false;
             StoreItem model = null;
@@ -111,7 +111,7 @@ namespace StoreSite.Controllers
             }
             catch(NullReferenceException e) 
             {
-                return RedirectToAction("CurrentStock");
+                return RedirectToAction("CurrentStock" + e);
             }
 
             if(model != null )

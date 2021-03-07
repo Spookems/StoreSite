@@ -16,12 +16,25 @@ namespace StoreSite.Models.DBInteraction
 
         }
 
-        public bool Add()
+        public bool Add(Guid id)
         {
-            throw new NotImplementedException();
+            bool saved = false;
+
+            var item = SqlData.StoreListings.Find(id);
+
+            if (item != null)
+            {
+                SqlData.StoreListings.Add(item);
+
+                SqlData.SaveChanges();
+
+                saved = true;
+            }
+
+            return saved;
         }
 
-        public bool Delete(int id)
+        public bool Delete(Guid id)
         {
             bool saved = false;
 
@@ -39,7 +52,7 @@ namespace StoreSite.Models.DBInteraction
             return saved;
         }
 
-        public StoreItem Details(int id)
+        public StoreItem Details(Guid id)
         {
             var item = SqlData.StoreListings.Find(id);
 

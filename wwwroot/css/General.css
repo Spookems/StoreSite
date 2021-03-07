@@ -109,7 +109,7 @@ body {
 /* Test */
 
 .parralax {
-    background: url('../Images/Car 01.jpg') center;
+    background: url('../Images/Background.jpg') center;
     background-size: cover;
     background-attachment: fixed;
     height: 700px;
