@@ -11,5 +11,7 @@ namespace StoreSite.Data
 
         }
         public DbSet<StoreItem> StoreListings { get; set; }
+
+        public DbSet<Bundle> Bundles { get; set; }
     }
 }

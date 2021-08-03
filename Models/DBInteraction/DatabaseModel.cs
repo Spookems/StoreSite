@@ -11,48 +11,48 @@ namespace StoreSite.Models.DBInteraction
     {
         IDatabaseContext SqlData = new IDatabaseContext();
 
-        bool result = false;
         public DatabaseModel()
         {
 
         }
 
-        public bool Add(StoreItem item)
+        public bool Add(Guid id)
         {
-            if(item != null)
-            {
-                if (item.Title == null)
-                {
-                    item.Title = "Untitled";
-                }
-
-                SqlData.StoreListings.Add(item);
-
-                result = true;
-
-            }
-
-            return result;
-        }
-
-        public bool Delete(int id)
-        {
-            result = false;
+            bool saved = false;
 
             var item = SqlData.StoreListings.Find(id);
 
             if (item != null)
             {
+                SqlData.StoreListings.Add(item);
+
+                SqlData.SaveChanges();
+
+                saved = true;
+            }
+
+            return saved;
+        }
+
+        public bool Delete(Guid id)
+        {
+            bool saved = false;
+
+            var item = SqlData.StoreListings.Find(id);
+
+            if(item != null)
+            {
                 SqlData.StoreListings.Remove(item);
 
                 SqlData.SaveChanges();
 
-                result = true;
+                saved = true;
             }
-            return result;
+
+            return saved;
         }
 
-        public StoreItem Details(int id)
+        public StoreItem Details(Guid id)
         {
             var item = SqlData.StoreListings.Find(id);
 

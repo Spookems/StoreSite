@@ -5,62 +5,75 @@
     ViewData["Title"] = "CurrentStock";
 }
 
-<h1>CurrentStock</h1>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                Product Name
-            </th>
-            <th>
-                Thumbnail Description
-            </th>
-            <th>
-                Long Description
-            </th>
-            <th>
-                Thumbnail Image Address
-            </th>
-            <th>
-                Large Image Address
-            </th>
-            <th>
-                Base Pricing (No Discounts)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model)
-        {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Title)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.DescriptionS)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.DescriptionL)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.ImageS)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.ImageL)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Pricing)
-                </td>
-                <td id="@item.ID">
-                    <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
-                    @*<a class="btn btn-primary btn-lg expandDetailsButton" id="expandDetailsButton">Enlarge</a>|*@
-                    <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
-                </td>
-            </tr>
-        }
-    </tbody>
-</table>
+<div class="bg-white ">
+    <h2 class="md-4 mb-2 bg-light">Current Stock Information</h2>
+    <div class="card">
+        <div class="card-header">
+            <h4 class="text-black-50">Packages</h4>
+        </div>
+        <div class="card-body">
+
+            <div class="col-12 md-2 mb-2">
+                <div class="text-right" style="margin-top:20px;">
+                    <a asp-controller="Store" asp-action="Product" asp-route-id="@ViewBag.id" class="btn btn-secondary"><i class="fas fa-plus"></i>&nbsp;Add Product</a>
+                </div>
+            </div>
+            <table class="table table-striped table-responsive m-0">
+                <thead>
+                    <tr >
+                        
+                        <th>
+                            Product name
+                        </th>
+                        <th class="col-3">
+                            Thumbnail Description
+                        </th>
+                        
+                        <th>
+                            Thumbnail Image Address
+                        </th>
+                        <th>
+                            Large Image Address
+                        </th>
+                        <th>
+                            Base Pricing (No Discounts)
+                        </th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                    <tr>
+                        <td>
+                            @item.Title.Trim()
+                        </td>
+                        <td class="col-3">
+                            @item.DescriptionS.Trim()
+                        </td>
+                        <td>
+                            @item.ImageS
+                        </td>
+                        <td>
+                            @item.ImageL
+                        </td>
+                        <td>
+                            @item.Pricing
+                        </td>
+                        
+                        <td class="col-2">
+                            <div class="btn-group" role="group" aria-label="Product options">
+                                <a asp-action="Product" asp-controller="Store" asp-route-id="@item.ID" class="btn btn-secondary" title="Edit"><i class="fas editIcon"></i></a> |
+                                <a asp-action="DeleteProduct" asp-controller="Store" asp-route-id="@item.ID" class="btn btn-secondary" onclick="return confirm('Are you sure you wish to delete this?')" title="DeleteProduct"><i class="fas binIcon"></i></a>
+                            </div>
+                        </td>
+                    </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
 
 <script src="~/lib/jquery/dist/jquery.js"></script>
 <script src="~/js/CurrentStock.js"></script>

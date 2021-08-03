@@ -1,8 +1,9 @@
 ﻿namespace StoreSite.Migrations
 {
+    using System;
     using System.Data.Entity.Migrations;
-
-    public partial class initial : DbMigration
+    
+    public partial class pain : DbMigration
     {
         public override void Up()
         {
@@ -10,13 +11,16 @@
                 "dbo.StoreItems",
                 c => new
                 {
-                    ID = c.Int(nullable: false, identity: true),
+                    ID = c.Guid(nullable: false, identity: true),
                     Title = c.String(),
                     DescriptionS = c.String(),
                     DescriptionL = c.String(),
                     ImageS = c.String(),
                     ImageL = c.String(),
                     Pricing = c.Int(nullable: false),
+                    AssociatedDeals = c.Guid(),
+                    LocationLine1 = c.String(),
+                    LocationLine2 = c.String(),
                 })
                 .PrimaryKey(t => t.ID);
 

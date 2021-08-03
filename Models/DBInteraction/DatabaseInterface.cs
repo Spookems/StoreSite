@@ -1,4 +1,5 @@
 ﻿using StoreSite.Models.Classes;
+using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 
@@ -7,13 +8,13 @@ namespace StoreSite.Models.DBInteraction
     interface IDatabaseInterface
     {
 
-        public bool Add(StoreItem item);
+        public bool Add(Guid id);
 
-        public bool Delete(int id);
+        public bool Delete(Guid id);
 
         public void Save(StoreItem id);
 
-        public StoreItem Details(int id);
+        public StoreItem Details(Guid id);
 
         public DbSet<StoreItem> ListAll();
 
