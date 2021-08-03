@@ -7,7 +7,7 @@ namespace StoreSite.Models.DBInteraction
     interface IDatabaseInterface
     {
 
-        public bool Add();
+        public bool Add(StoreItem item);
 
         public bool Delete(int id);
 

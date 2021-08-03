@@ -10,7 +10,7 @@ namespace StoreSite.Controllers
     public class StoreController : Controller
     {
         
-        public IDatabaseContext Db = new IDatabaseContext();
+       // public IDatabaseContext Db = new IDatabaseContext();
 
         public DatabaseModel DB = new DatabaseModel();
         
