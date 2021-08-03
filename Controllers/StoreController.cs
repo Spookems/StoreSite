@@ -8,11 +8,15 @@ namespace StoreSite.Controllers
 {
     public class StoreController : Controller
     {
+        #region const
 
         public IDatabaseContext Db = new IDatabaseContext();
 
         public DatabaseModel DB = new DatabaseModel();
 
+        #endregion
+
+        #region Redirects
 
         public IActionResult Index()
         {
@@ -39,6 +43,10 @@ namespace StoreSite.Controllers
 
             return View(listings);
         }
+
+        #endregion
+
+        #region Database Interaction
 
         [HttpGet]
         public IActionResult Edit(Guid id)
@@ -93,7 +101,8 @@ namespace StoreSite.Controllers
                 }
                 else
                 {
-                    Db.StoreListings.Add(item);
+                    item.ID = Guid.NewGuid();
+                    DB.Add(item);
                 }
             }
 
@@ -126,7 +135,7 @@ namespace StoreSite.Controllers
 
         public void FilterListings(string input1, string input2, string input3, string input4)
         {
-
+            //Todo
         }
 
         public IActionResult Search(string input)
@@ -135,5 +144,7 @@ namespace StoreSite.Controllers
 
             return Redirect("Listings");
         }
+
+        #endregion
     }
 }

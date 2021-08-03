@@ -16,11 +16,11 @@ namespace StoreSite.Models.DBInteraction
 
         }
 
-        public bool Add(Guid id)
+        #region Database Interaction
+
+        public bool Add(StoreItem item)
         {
             bool saved = false;
-
-            var item = SqlData.StoreListings.Find(id);
 
             if (item != null)
             {
@@ -72,7 +72,9 @@ namespace StoreSite.Models.DBInteraction
 
             SqlData.SaveChanges();
         }
+        #endregion
 
+        #region Misc Interaction
         public IEnumerable<StoreItem> FilterEntries(string filter1)
         {
             var model = SqlData.StoreListings.Where(i => i.Title == filter1);
@@ -84,5 +86,6 @@ namespace StoreSite.Models.DBInteraction
         {
             return SqlData.StoreListings;
         }
+        #endregion
     }
 }

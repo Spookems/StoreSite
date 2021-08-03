@@ -3,7 +3,7 @@
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class nuuillable : DbMigration
+    public partial class Merger : DbMigration
     {
         public override void Up()
         {
