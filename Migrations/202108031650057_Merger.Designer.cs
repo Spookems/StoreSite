@@ -7,13 +7,13 @@ namespace StoreSite.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.4")]
-    public sealed partial class nuuillable : IMigrationMetadata
+    public sealed partial class Merger : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(nuuillable));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(Merger));
         
         string IMigrationMetadata.Id
         {
-            get { return "202103071242225_nuuillable"; }
+            get { return "202108031650057_Merger"; }
         }
         
         string IMigrationMetadata.Source

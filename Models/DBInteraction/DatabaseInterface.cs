@@ -8,7 +8,7 @@ namespace StoreSite.Models.DBInteraction
     interface IDatabaseInterface
     {
 
-        public bool Add(Guid id);
+        public bool Add(StoreItem id);
 
         public bool Delete(Guid id);
 
