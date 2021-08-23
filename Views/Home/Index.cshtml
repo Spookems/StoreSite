@@ -5,15 +5,120 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+    
     <!-- Bootstrap CSS -->
 </head>
 
 <body>
 
-    <div class="col-12 row">
-        <main role="main">
-            <div class="jumbotron p-4 p-md-5 text-white rounded homeMain">
+    <div>
+        <main>
+
+            <div class="big-image">
+                <div class="overlay">
+                    <h1>Hero Image With Overlay</h1>
+                    <p>A full width background image built with HTML & CSS.</p>
+                    <div class="bg-dark container" style="padding:10px; border-radius:10px 10px; margin-bottom:20px;">
+                        <div>
+                            <p style="color:white">
+                                Search through our Range of Products
+                            </p>
+                            <form class="form-inline w-100" asp-action="Search" asp-controller="Store">
+                                <input class="form-control w-100" type="text" placeholder="Search our Products" aria-label="Search our Products..." name="input" />
+                            </form>
+                        </div>
+
+
+                    </div>
+                    <div class="container marketing">
+                        <div class="row">
+                            <div class="col-lg-4 position-relative" style="margin-bottom:50px;">
+                                <img class="bd-placeholder-img rounded-circle thumbnailComponent" src="~/Images/HeadPhones.jpg" width="140" height="140">
+                                <h2 style="text-align:center">Current Listings</h2>
+                                <p style="text-align:center">Here at FosterCo, stock moves quickly, goods arrive in small numbers and are shipped out almost as quickly as they are shipped in, check current stock levels to see if we have what you're looking for!</p>
+                                <div class="thumbnailButtonHolder"><a class="btn btn-secondary thumbnailComponent" asp-area="" asp-controller="Store" asp-action="Listings">View details »</a></div>
+                            </div>
+
+                            <div class="col-lg-4 position-relative" style="margin-bottom:50px;">
+                                <img class="bd-placeholder-img rounded-circle thumbnailComponent" src="~/Images/Tech.jpg" width="140" height="140">
+                                <h2 style="text-align:center">Technologies</h2>
+                                <p style="text-align:center">Take a look under the curtain at the technologies and people that made this website possible.</p>
+                                <div class="thumbnailButtonHolder"><a class="btn btn-secondary thumbnailComponent" asp-area="" asp-controller="Home" asp-action="Technologies">View details »</a></div>
+                            </div>
+
+                            <div class="col-lg-4 position-relative" style="margin-bottom:50px;">
+                                <img class="bd-placeholder-img rounded-circle thumbnailComponent" src="~/Images/Tree.jpg" width="140" height="140">
+                                <h2 style="text-align:center">Future Plans</h2>
+                                <p style="text-align:center;">Theres a long road map set in place for FosterCo, but all plans must start somewhere, for us, that place is here.</p>
+                                <div class="thumbnailButtonHolder"><a class="btn btn-secondary thumbnailComponent" href="#" role="button">View details »</a></div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                
+            </div>
+            
+        </main>
+    </div>
+</body>
+
+<style>
+
+
+    body {
+        margin: 0;
+        font-family: "Roboto", sans-serif;
+        overflow-x: hidden;
+    }
+
+.big-image {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-image: url("https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1920&q=80");
+}
+
+.overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.65);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.overlay h1 {
+  font-size: 65px;
+  letter-spacing: 0px;
+  margin: 0 0 5px;
+}
+
+
+#vids {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 60px;
+}
+
+#vids a:first-of-type {
+  margin-bottom: 5px;
+}
+</style>
+
+
+@*<div class="parralax wrapper" style="height:1200px;">
+        <div class="jumbotron p-4 p-md-5 text-white rounded bg-transparent">
+            <div class="jumbotron p-4 p-md-5 text-white rounded bg-transparent">
                 <div class="col-md-6 px-0 blurred-box">
                     <h1 class="display-4 font-weight-light">FosterCo ltd.</h1>
                     <p class="lead my-3">Welcome to my test website, currently this website serves no functional purpose and exists soley as a testing ground, the fictional company this site is modelled around is 'FosterCo' a music retailer based in the UK.  <br /> Feel free to have a look around.</p>
@@ -31,59 +136,6 @@
                     </form>
                 </div>
             </div>
-            <div class="container marketing">
 
-                <!-- Three columns of text below the carousel -->
-                <div class="row">
-                    <div class="col-lg-4 position-relative" style="margin-bottom:50px;">
-                        <img class="bd-placeholder-img rounded-circle thumbnailComponent" src="~/Images/HeadPhones.jpg" width="140" height="140">
-                        <h2 style="text-align:center">Current Listings</h2>
-                        <p style="height:130px; text-align:center">Here at FosterCo, stock moves quickly, goods arrive in small numbers and are shipped out almost as quickly as they are shipped in, check current stock levels to see if we have what you're looking for!</p>
-                        <div class="thumbnailButtonHolder"><a class="btn btn-secondary thumbnailComponent" asp-area="" asp-controller="Store" asp-action="Listings">View details »</a></div>
-                    </div>
-
-                    <div class="col-lg-4 position-relative" style="margin-bottom:50px;">
-                        <img class="bd-placeholder-img rounded-circle thumbnailComponent" src="~/Images/Tech.jpg" width="140" height="140">
-                        <h2 style="text-align:center">Technologies</h2>
-                        <p style="height:130px; text-align:center">Take a look under the curtain at the technologies and people that made this website possible.</p>
-                        <div class="thumbnailButtonHolder"><a class="btn btn-secondary thumbnailComponent" asp-area="" asp-controller="Home" asp-action="Technologies">View details »</a></div>
-                    </div>
-
-                    <div class="col-lg-4 position-relative" style="margin-bottom:50px;">
-                        <img class="bd-placeholder-img rounded-circle thumbnailComponent" src="~/Images/Tree.jpg" width="140" height="140">
-                        <h2 style="text-align:center">Future Plans</h2>
-                        <p style="height:130px; text-align:center;">Theres a long road map set in place for FosterCo, but all plans must start somewhere, for us, that place is here.</p>
-                        <div class="thumbnailButtonHolder"><a class="btn btn-secondary thumbnailComponent" href="#" role="button">View details »</a></div>
-                    </div>
-                </div>
-
-            </div>
-        </main>
-    </div>
-</body>
-
-
-
-@*<div class="parralax wrapper" style="height:1200px;">
-    <div class="jumbotron p-4 p-md-5 text-white rounded bg-transparent">
-        <div class="jumbotron p-4 p-md-5 text-white rounded bg-transparent">
-            <div class="col-md-6 px-0 blurred-box">
-                <h1 class="display-4 font-weight-light">FosterCo ltd.</h1>
-                <p class="lead my-3">Welcome to my test website, currently this website serves no functional purpose and exists soley as a testing ground, the fictional company this site is modelled around is 'FosterCo' a music retailer based in the UK.  <br /> Feel free to have a look around.</p>
-                <p class="lead mb-0"><a asp-controller="Home" asp-action="About" class="text-white font-weight-bold">About FosterCo...</a></p>
-            </div>
         </div>
-
-        <div class="col-12 bg-dark" style="padding:10px; border-radius:10px 10px; margin-bottom:20px;">
-            <div>
-                <p style="color:white;">
-                    Search through our Range of Products
-                </p>
-                <form class="form-inline w-100" asp-action="Search" asp-controller="Store">
-                    <input class="form-control w-100" type="text" placeholder="Search our Products" aria-label="Search our Products..." name="input" />
-                </form>
-            </div>
-        </div>
-
-    </div>
-</div>*@
+    </div>*@

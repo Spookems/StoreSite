@@ -1,78 +1,20 @@
 ﻿<!DOCTYPE html>
 
-<style>
-
-    .sticky {
-        position: fixed !important;
-        z-index: 5;
-        width: 100%;
-    }
-
-    .stickyMain {
-        padding-top: 60px;
-        margin-bottom:30px;
-    }
-
-    .container {
-        margin-left: 0px;
-        margin-right: 0px;
-        
-        max-width: 1400px !important;
-    }
-
-    .dropbtn {
-        background-color: inherit;
-        color: rgba(255,255,255,.5);
-        padding: 8px;
-        font-size: 16px;
-        border: none;
-    }
-
-    .dropdown {
-        position: relative;
-        display: inline-block;
-        border-radius:5px;
-    }
-
-    .dropdown-content {
-        display: none;
-        position: absolute;
-        background-color: #212529;
-        min-width: 160px;
-        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-        z-index: 1;
-    }
-
-        .dropdown-content a {
-            color: rgba(255,255,255,.5);
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-        }
-
-            
-
-    .dropdown:hover .dropdown-content {
-        display: block;
-    }
-
-    .dropdown:hover .dropbtn {
-        color: rgba(255,255,255,.75);
-    }
-</style>
-
 <html lang="en">
-
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - StoreSite</title>
+
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" />
-    <link rel="stylesheet" href="~/css/General.css" />
+
+    <link href="~/css/site.css" rel="stylesheet" />
+    <link href="~/css/General.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
+
+    <title>@ViewData["Title"] - StoreSite</title>
 </head>
 <body>
-    <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="navbar">
             <div class="container">
                 <a class="navbar-brand" href="#">Website Template</a>
@@ -102,8 +44,7 @@
                                 <a href="#">Link 3</a>
                             </div>
                         </li>
-                        <partial name="_LoginPartial" class= nav-item"/>
-
+                        <partial name="_LoginPartial" />
                     </ul>
 
                     <form class="form-inline my-2 my-md-0 w-60">
@@ -112,33 +53,29 @@
                 </div>
             </div>
         </nav>
-    </header>
-    <div class="container bg-light pt-4 pb-5" id="Main">
-        <main role="main" class="pb-3 mt-5 " style="max-width:1600px;">
+    <div class="bg-light pt-2" id="Main">
+        <main role="main" class="mt-5">
             @RenderBody()
         </main>
     </div>
 
-    <footer class="border-top container-fluid pt-3 pb-5">
+    @*<footer class="border-top container-fluid pt-3 pb-5">
         <div class="col-12 row">
             <div class="col-6 float-left">
                 <strong>@DateTime.Now.Year/@DateTime.Now.Month/@DateTime.Now.Day - Store Site</strong>
             </div>
             <div class="col-6 ">
-                <label class="float-right"><a asp-area="" asp-controller="Home" asp-action="Privacy">Our Privacy Policy</a> -  <a asp-area="" asp-controller="Home" asp-action="Index" >Home Page</a></label>
+                <label class="float-right"><a asp-area="" asp-controller="Home" asp-action="Privacy">Our Privacy Policy</a> -  <a asp-area="" asp-controller="Home" asp-action="Index">Home Page</a></label>
             </div>
         </div>
-    </footer>
+    </footer>*@
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
-    <script src="~/js/NavBar.js" ></script>
+    <script src="~/js/NavBar.js"></script>
     @RenderSection("Scripts", required: false)
 </body>
 </html>
